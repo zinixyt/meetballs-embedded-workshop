@@ -8,8 +8,8 @@ It's suggested you use Visual Studio Code for this session and you will need the
 
 | Name            | Link                                                                                    | Purpose |
 | --------------- | --------------------------------------------------------------------------------------- | ----------- |
-| Arduino         |[Link](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino) |Just for the syntax highlighting|
-| Wokwi Simulator |[Link](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode)           |The actual emulator|
+| Arduino         |[Link](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino) |Syntax highlighting|
+| Wokwi Simulator |[Link](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode)           |Emulator|
 
 Now that you have the extensions installed, you can clone this repo inside a folder of your choice
 
