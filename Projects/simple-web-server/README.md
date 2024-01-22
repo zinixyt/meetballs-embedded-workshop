@@ -1,7 +1,7 @@
 # Let's code
 
-To see if everything is working you can click the **Green Play Button** and watch it do **ｎｏｔｈｉｎｇ**! (just prints "Hello, ESP32!").
-Then you can stop the simulation before your computer does a "spectacular firework show"!
+To see if everything is working you can click the ![Green Play](greenpb.png) button and watch it do **ｎｏｔｈｉｎｇ**! (just prints "Hello, ESP32!").
+Then you can stop the simulation before your computer does a "spectacular firework show".
 
 ## Code Explained
 
@@ -16,7 +16,7 @@ void loop() {
 
 ```
 
-You might have noticed that there are two void functions, they are void because they only take inputs, think of it as a... void. The two functions are named `setup` and `loop`, the difference between them is that the `setup` function only runs once, while the `loop` function runs all the time, looping...
+You might have noticed that there are two void functions, they are void because they only take inputs, think of it as a... void. The two functions are named `setup` and `loop`, the difference between them is that the `setup` function **only runs once**, while the `loop` function runs all the time, **looping**...
 
 ---
 
@@ -95,3 +95,67 @@ This code contains the library imports, defines the LCD object, sets some consta
 The LCD works like this:
 
 ![LCD inner workings](lcd.webp)
+
+So when you set the cursor to [15,1] you are setting it to the 15th column, to the 2nd row.
+
+### Part 2
+
+We are going to use the `getLocalTime()` function built-in to the `WiFi` library to get the time from the NTP server
+
+```cpp
+void printLocalTime() {
+  struct tm timeinfo; //create the struct variable for the time
+  if (!getLocalTime(&timeinfo)) { // if can't get time throw error
+    LCD.setCursor(0, 1);
+    LCD.println("Connection Err");
+    return; //exit function
+  }
+
+  LCD.setCursor(8, 0); // set cursor to position
+  LCD.println(&timeinfo, "%H:%M:%S"); // write the time with a pre-defined format
+
+  LCD.setCursor(0, 1); // again
+  LCD.println(&timeinfo, "%d/%m/%Y   %Z"); // write the date with a pre-defined format
+}
+```
+
+### Part 3
+
+By the end of this part, we should have this code written:
+
+```cpp
+void setup() {
+  Serial.begin(115200); //set data speed
+
+  LCD.init(); // initialize the lcd
+  LCD.backlight(); // turn on its backlight
+  LCD.setCursor(0, 0);
+  LCD.print("Connecting to ");
+  LCD.setCursor(0, 1);
+  LCD.print("WiFi ");
+
+  WiFi.begin("Wokwi-GUEST", "", 6); //connect to the virtual wifi on channel 6 with no password
+  while (WiFi.status() != WL_CONNECTED) { // while not connected
+    delay(250);
+    spinner();      // do the fancy animation
+  }
+
+  Serial.println("");
+  Serial.println("WiFi connected");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP()); // print IP address
+
+  LCD.clear(); //clear the lcd
+  LCD.setCursor(0, 0);
+  LCD.println("Online");
+  LCD.setCursor(0, 1);
+  LCD.println("Updating time...");
+
+  configTime(UTC_OFFSET, UTC_OFFSET_DST, NTP_SERVER); // set the time settings of the ESP32
+}
+
+void loop() {
+  printLocalTime(); // do the actual thing
+  delay(250); // wait 250ms, so it refreshes 4 times per second: 1s/4=0.25s -> 250ms
+}
+```
