@@ -4,15 +4,17 @@ In this session, we will delve into the fascinating world of embedded systems an
 
 ## 1. Let's setup our environment
 
-It's suggested you use Visual Studio Code for this session and you will need the following extensions:
+First, you are going to need a wokwi account, you can sign up with *Google*, *Github* or *Email*
 
-| Name            | Link                                                                                    | Purpose |
-| --------------- | --------------------------------------------------------------------------------------- | ----------- |
-| Arduino         |[Link](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino) |Syntax highlighting|
-| Wokwi Simulator |[Link](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode)           |Emulator|
+1. Go to the [Wokwi website](https://wokwi.com).
+2. On the top-right corner of the page, click the `SIGN IN/UP` button and choose the method of your choice.
+3. [Click this link](https://wokwi.com/projects/new/esp32) to create a new ESP32 project!
 
-Now that you have the extensions installed, you can clone this repo inside a folder of your choice
+Now that we are set up, we can start coding! Well, not yet...
 
-``` bash
-git clone https://github.com/zinixyt/meetballs-embedded-workshop.git
-```
+## 2. Projects
+
+| \ | Name | Link |
+| ----- | ----------- | ----------- |
+| 1 | Simple Web Server | [Link]() |
+| 2 | Paragraph | Text |
