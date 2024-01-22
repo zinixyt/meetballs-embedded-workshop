@@ -16,4 +16,4 @@ Now that we are set up, we can start coding! Well, not yet...
 
 | \ | Name | Link |
 | ----- | ----------- | ----------- |
-| 1 | Simple Web Server | [Link](https://github.com/zinixyt/meetballs-embedded-workshop/blob/main/Projects/simple-web-server/README.md) |
+| 1 | NTP Clock | [Link](https://github.com/zinixyt/meetballs-embedded-workshop/blob/main/Projects/simple-web-server/README.md) |
