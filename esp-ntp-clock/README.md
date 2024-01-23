@@ -16,7 +16,7 @@ Connect the pins up to the ESP32 in this way. We'll use the I2C protocol. It's b
 | SDA |  21 |
 | SCL |  22 |
 
-Your project should look like this:
+Your circuit should look like this:
 
 ![It should look like this](assembly.png)
 
