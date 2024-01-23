@@ -38,7 +38,7 @@ Make the circuit below:
 
 ![Circuit](digitalasm.png)
 
-Now we are goin to start coding, and for that, we will need some functions...
+Now we are going to start coding, and for that, we will need some functions...
 
 ---
 
