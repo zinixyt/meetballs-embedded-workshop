@@ -2,6 +2,8 @@
 
 In this session, we will delve into the fascinating world of embedded systems and learn how to code for them using an emulated arduino and ESP32.
 
+**if you come from python or javascript, the `;` will be your arch nemesis**
+
 ## 1. Let's setup our environment
 
 First, you are going to need a Wokwi account, you can sign up with *Google*, *Github* or *Email*
