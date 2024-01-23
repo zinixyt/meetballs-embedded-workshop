@@ -11,10 +11,10 @@ First, you are going to need a Wokwi account, you can sign up with *Google*, *Gi
 1. Go to the [Wokwi website](https://wokwi.com).
 2. On the top-right corner of the page, click the `SIGN IN/UP` button and choose the method of your choice.
 
+Now that we are set up, we can start coding! Well, not yet...
+
 - [Click this link](https://wokwi.com/projects/new/arduino-uno) to create a new Arduino project!
 - [Click this link](https://wokwi.com/projects/new/esp32) to create a new ESP32 project!
-
-Now that we are set up, we can start coding! Well, not yet...
 
 ## 2. Projects
 

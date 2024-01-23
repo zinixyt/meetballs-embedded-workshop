@@ -26,12 +26,13 @@ In this first project we will:
 - Learn how to use the analog ports
 - Learn how to use libraries
 
-### Digital ports
+### Digital Ports
 
 For this step we will need:
 
 - 1x `Half Breadboard`
 - 1x `LED`
+- 1x `Resistor`
 - 1x `Pushbutton`
 
 Make the circuit below:
@@ -145,3 +146,26 @@ void loop() {
   }
 }
 ```
+
+Don't forget to save your work
+
+### Analog Ports
+
+[Create a new project](https://wokwi.com/projects/new/arduino-uno), and add the following parts:
+
+- 1x `Half Breadboard`
+- 4x `LED`s
+- 4x `Resistors`
+- 1x `Slide Potentiometer`
+
+---
+
+***Quick binary lesson***
+
+The analog pins in the arduino are 10-bit, so the maximum value of the read is 1023(5v), and that is `0b1111111111`(ten ones) in binary. Think of the 10-Bit as a resolution, the more bits, the more granular control you have.
+
+---
+
+Put the components together like this:
+
+![Analog Circuit](analogasm.png)
