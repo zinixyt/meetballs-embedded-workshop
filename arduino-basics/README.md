@@ -60,4 +60,4 @@ For this step we will need:
 
 Make the circuit below:
 
-![Circuit]()
+![Circuit](digitalasm.png)
