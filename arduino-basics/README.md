@@ -24,7 +24,6 @@ In this first project we will:
 
 - Learn how to use the digital ports
 - Learn how to use the analog ports
-- Learn how to use libraries
 
 ### Digital Ports
 
@@ -169,3 +168,55 @@ The analog pins in the arduino are 10-bit, so the maximum value of the read is 1
 Put the components together like this:
 
 ![Analog Circuit](analogasm.png)
+
+We are going to make a slider that turns on LEDs based on it's position. First, we need to get the position of the slider by reading the analog value of the pin it's connected to.
+
+We can do this by using the...
+
+```cpp
+analogRead(5) //returns an integer in the 0-1023 range, 10-bit
+```
+
+... function and assigning it to a variable `sliderValue`.
+
+Next, we can define custom ranges with `if` statements, and turn the LEDs on or off accordingly.
+
+```cpp
+void loop() {
+  sliderValue = analogRead(5); //do not confuse analog pin 5 with digital 5
+  //(1024/4)-1 = 255
+  if (sliderValue == 0) {
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+    Serial.println("0");
+  }else if (sliderValue <= 255){
+    digitalWrite(13, HIGH);
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+    Serial.println("1");
+  } else if (sliderValue <= 255+255) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+    Serial.println("2");
+  } else if (sliderValue <= 255+255+255) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(10, LOW);
+    Serial.println("3");
+  } else if (sliderValue >= 255+255+255+255) {
+    digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(10, HIGH);
+    Serial.println("4");
+  }
+}
+```
+
+Now, you can press the ![Green Play](greenpb.png) button and test your work!
