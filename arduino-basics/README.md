@@ -31,7 +31,7 @@ For this step we will need:
 
 - 1x `Half Breadboard`
 - 1x `LED`
-- 1x `Resistor`
+- 1x `Resistor (330 ohm)`
 - 1x `Pushbutton`
 
 Make the circuit below:
@@ -154,7 +154,7 @@ Don't forget to save your work!
 
 - 1x `Half Breadboard`
 - 4x `LED`s
-- 4x `Resistors`
+- 4x `Resistors (330 ohm)`
 - 1x `Slide Potentiometer`
 
 ---
